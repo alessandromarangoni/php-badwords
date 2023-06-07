@@ -11,6 +11,8 @@
     <?php
     $paragrafoRender = $_GET["paragrafo"];
     $paragrafoArray = explode(" ", $paragrafoRender);
+    $badWords = ['ciao', 'come','gatto','cane'];
+    $paragrafoFiltrato = str_replace($badWords, '***', $paragrafoRender)
     ?>
 
     <div>
@@ -18,16 +20,13 @@
         <h2>
             <?php echo $paragrafoRender?>
         </h2>
-        <p>
-        <?php   var_dump($paragrafoRender)?>
-        </p>
         <!-- qui il paragrafo stampato  con la sua lunghezza-->
         <p>
             <?php  echo $paragrafoRender . " <br> " .
             'il paragrafo è lungo: ' . strlen($paragrafoRender) . ' ' . 'caratteri' ?>
         </p>
         <p>
-        <?php   var_dump($paragrafoArray)?>
+        <?php echo $paragrafoFiltrato ?>
         </p>
         
     </div>
