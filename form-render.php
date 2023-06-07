@@ -11,7 +11,8 @@
     <?php
     $paragrafoRender = $_GET["paragrafo"];
     $paragrafoArray = explode(" ", $paragrafoRender);
-    $badWords = ['ciao', 'come','gatto','cane'];
+    // parole che saranno rimpiazzate
+    $badWords = ['ciao','come','gatto','cane'];
     $paragrafoFiltrato = str_replace($badWords, '***', $paragrafoRender)
     ?>
 
