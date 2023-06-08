@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +11,11 @@
 <body>
     <?php
     $paragrafoRender = $_GET["paragrafo"];
+    $parolaRender = $_GET["parola"];
     $paragrafoArray = explode(" ", $paragrafoRender);
     // parole che saranno rimpiazzate
-    $badWords = ['ciao','come','gatto','cane'];
-    $paragrafoFiltrato = str_replace($badWords, '***', $paragrafoRender)
+    $badWord = [$parolaRender];
+    $paragrafoFiltrato = str_replace($badWord, '***', $paragrafoRender)
     ?>
 
     <div>
@@ -21,6 +23,7 @@
         <h2>
             <?php echo $paragrafoRender?>
         </h2>
+        <p><?php  var_dump($paragrafoArray)?></p>
         <!-- qui il paragrafo stampato  con la sua lunghezza-->
         <p>
             <?php  echo $paragrafoRender . " <br> " .

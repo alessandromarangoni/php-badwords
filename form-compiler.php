@@ -13,6 +13,7 @@
     <div>
     <form action="form-render.php" method="get">
         <input type="text" name="paragrafo" id="paragrafo" placeholder="inserisci il tuo testo">
+        <input type="text" name="parola" id="paragrafo" placeholder="inserisci parola">
         <button type="submit"> verifica </button>
     </form>
     </div>
